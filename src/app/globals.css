@@ -23,4 +23,64 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #B6CCDA;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(20px, 1fr) [content-start] minmax(0, 600px) [middle] minmax(0, 600px) [content-end] minmax(20px, 1fr);
+
+  > * {
+    grid-column: content;
+  }
 }
+.full-bleed {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+
+  > * {
+    grid-column: content;
+  }
+}
+
+header {
+  grid-column: 1/-1;
+
+  .headerinfo{
+    grid-column: content;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    .logo{
+      .apple {
+        width: 48px;
+        height: 48px;
+        color: white;
+      } 
+    }
+    .links{
+      display: flex;
+      gap: 3rem;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      a{
+        border-radius: 1.8rem;
+        padding-inline: 1.5rem;
+      }
+      a:hover{
+        background-color: white;
+        color:#B6CCDA;
+      }
+    }
+    .basketsearch{
+      display: flex;
+      .lup, .pose{
+        font-size: 24px;
+        color: white;
+      }
+    }
+  }
+}
+
