@@ -1,6 +1,9 @@
 "use client";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Threewatches from "./Threewatches";
+import Colorpalette from "./Palette";
+import Image from "next/image";
 
 const Herosection = () => {
     return (
@@ -18,23 +21,16 @@ const Herosection = () => {
             <div className="left">
                 <div className="selected">
                     <div className="img-wrapper">
-                        <img className="big" src="/iwatchimg/navy.png" alt="navy" />
+                        <Image
+                            src="/iwatchimg/navy.png"
+                            alt="navy"
+                            width={486}
+                            height={486}
+                        />
                     </div>
-                    <div className="palette-wrapper">
-                        <img className="palette" src="/iwatchimg/farvepalette.png" alt="palette" />
-                    </div>
+                    <Colorpalette />
                 </div>
-                <div className="options">
-                    <div className="option1-container">
-                        <img className="option1" src="/iwatchimg/navy.png" alt="navy" />
-                    </div>
-                    <div className="option3-container">
-                        <img className="option3" src="/iwatchimg/mint.png" alt="mint" />
-                    </div>
-                    <div className="option2-container">
-                        <img className="option2" src="/iwatchimg/pink.png" alt="pink" />
-                    </div>
-                </div>
+                <Threewatches />
             </div>
         </section>);
 }
