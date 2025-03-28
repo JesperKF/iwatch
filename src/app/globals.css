@@ -32,15 +32,6 @@ body {
     grid-column: content;
   }
 }
-.full-bleed {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: subgrid;
-
-  > * {
-    grid-column: content;
-  }
-}
 
 header {
   grid-column: 1/-1;
@@ -76,11 +67,156 @@ header {
     }
     .basketsearch{
       display: flex;
+      gap: .5rem;
+      align-items: center;
       .lup, .pose{
         font-size: 24px;
+        color: white;
+      }
+      span{
         color: white;
       }
     }
   }
 }
+
+.hero{
+  display: grid;
+    grid-template-columns: auto auto;
+    grid-column: content;
+  
+
+  .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .fat{
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    p{
+      color: white;
+      font-size: 50px;
+    }
+
+    button{
+      border: white 2px solid;
+      padding-inline: 4rem;
+      padding-block: 1rem;
+      width: fit-content;
+      font-size: 24px;
+      color: white;
+      border-radius: 2.2rem;
+      margin-top: 3rem;
+
+    }
+
+    .page{
+      display: flex;
+      position: fixed;
+      align-items: center;
+      bottom: 120px;
+      left: 120px;
+      .number{
+        font-size: 20px;
+      }
+      .arrow{
+        color: white;
+        font-size: 34px;
+      }
+    }
+  }
+  .left{
+    display: grid;
+    margin-top: 2rem;
+
+    .selected{
+      display: flex;
+      align-items: center;
+
+      .big{
+        height: 450px;
+        width: auto;
+      }
+      .palette{
+        height: 118px;
+        width: 30px;
+      }
+    }
+
+    .options{
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+.option1-container{
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(67, 69, 88, 0.6);
+    bottom: 0%;
+    left: 0%;
+    border-radius: 1.8rem;
+    z-index: -1;
+  }
+      .option1{
+        height: 90px;
+        width: 90px;
+      }
+    }
+    .option2-container{
+      position: relative;
+      display: inline-block;
+      padding: 20px;
+
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        background-color: rgba(197, 215, 225, 0.6);
+        bottom: 0%;
+        left: 0%;
+        border-radius: 1.8rem;
+        z-index: -1;
+      }
+      .option2{
+        height: 90px;
+        width: 90px;
+      }
+    }
+    .option3-container{
+      position: relative;
+      display: inline-block;
+      padding: 20px;
+
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        background-color: rgba(106, 221, 204, 0.6);
+        bottom: 0%;
+        left: 0%;
+        border-radius: 1.8rem;
+        z-index: -1;
+      }
+      .option3{
+        height: 90px;
+        width: 90px;
+      }
+    }
+    }
+  }
+}
+
 
