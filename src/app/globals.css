@@ -180,9 +180,9 @@ header {
             transparent 6px
           );
         }
-        .circle:hover {
+        .circle.isactive {
           transform: scale(1.3);
-          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
         }
       }
     }
