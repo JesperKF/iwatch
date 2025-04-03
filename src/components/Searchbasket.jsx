@@ -5,9 +5,9 @@ import { RiShoppingBag3Line } from "react-icons/ri"
 const Searchbasket = () => {
     return (
         <div className="flex gap-2">
-            <button className="text-white text-2xl"><FiSearch /></button>
+            <button className="text-white text-2xl cursor-pointer"><FiSearch /></button>
             <span className="text-white self-center">|</span>
-            <button className="text-white text-2xl"><RiShoppingBag3Line /></button>
+            <button className="text-white text-2xl cursor-pointer"><RiShoppingBag3Line /></button>
         </div>
     )
 }
