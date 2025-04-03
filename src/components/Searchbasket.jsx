@@ -4,10 +4,10 @@ import { RiShoppingBag3Line } from "react-icons/ri"
 
 const Searchbasket = () => {
     return (
-        <div className="basketsearch">
-            <button className="lup"><FiSearch /></button>
-            <span>|</span>
-            <button className="pose"><RiShoppingBag3Line /></button>
+        <div className="flex gap-2">
+            <button className="text-white text-2xl"><FiSearch /></button>
+            <span className="text-white self-center">|</span>
+            <button className="text-white text-2xl"><RiShoppingBag3Line /></button>
         </div>
     )
 }

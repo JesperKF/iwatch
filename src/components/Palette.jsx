@@ -2,20 +2,30 @@
 
 const Colorpalette = ({ selectedColor, onColorChange }) => {
     return (
-        <div className="palette">
+        <div className="flex flex-col items-center gap-2">
             <div
-                className={`circle navy ${selectedColor === "navy" ? "isactive" : ""}`}
+                className={`rounded-4xl border-2 border-white w-10 h-10 bg-[#404354] transition-transform duration-300 ease-in-out ${selectedColor === "navy" ? "scale-125" : ""}`}
                 onClick={() => onColorChange("navy")}
             />
-            <div className="dots"></div>
+              <div className="flex flex-col items-center gap-1">
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+            </div>
             <div
-                className={`circle mint ${selectedColor === "mint" ? "isactive" : ""}`}
+                className={`rounded-4xl border-2 border-white w-10 h-10 bg-[#58D7C4] transition-transform duration-300 ease-in-out ${selectedColor === "mint" ? "scale-125" : ""}`}
                 onClick={() => onColorChange("mint")}
             />
-            <div className="dots"></div>
+           <div className="flex flex-col items-center gap-1">
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+            </div>
             <div
-                className={`circle pink ${selectedColor === "pink" ? "isactive" : ""}`}
-                onClick={() => onColorChange("pink")}
+                className={`rounded-4xl border-2 border-white w-10 h-10 bg-[#B1C7D5] transition-transform duration-300 ease-in-out ${selectedColor === "ocean" ? "scale-125" : ""}`}
+                onClick={() => onColorChange("ocean")}
             />
         </div>
     );

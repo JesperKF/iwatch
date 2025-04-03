@@ -5,11 +5,9 @@ import Searchbasket from "./Searchbasket";
 
 const Header = () => {
     return (
-        <header>
-            <section className="headerinfo">
-                <div className="logo">
-                    <Logo />
-                </div>
+        <header className="col-span-full">
+            <section className="flex justify-between py-4">
+               <Logo />
                 <Navbar />
                 <Searchbasket />
             </section>

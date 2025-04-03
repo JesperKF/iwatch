@@ -12,8 +12,8 @@ const Leftsection = () => {
     };
 
     return (
-        <div className="left">
-            <div className="selected">
+        <div className="flex flex-col">
+            <div className="flex items-center">
                 <div className="img-wrapper">
                     <Image
                         src={`/iwatchimg/${watchColor}.png`}

@@ -5,7 +5,7 @@ import Rightsection from "./Right";
 
 const Herosection = () => {
     return (
-        <section className="hero">
+        <section className="grid grid-cols-2">
             <Rightsection />
             <Leftsection />
         </section>);
